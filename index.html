@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOAP | Roblox Developer</title>
+<style>
+  /* Reset & base */
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+  body{background:#0a0a0a;color:#fff;}
+  a{text-decoration:none;color:inherit;}
+
+  /* Navbar */
+  nav{display:flex;justify-content:space-between;padding:20px 50px;align-items:center;background:#111;}
+  nav .logo{font-size:1.8rem;color:#00ffff;font-weight:bold;}
+  nav .nav-links{display:flex;gap:25px;}
+  nav .nav-links li{list-style:none;}
+  nav .nav-links a{transition:0.3s;color:#fff;}
+  nav .nav-links a:hover{color:#00ffff;}
+
+  /* Hero Section */
+  .hero{display:flex;flex-direction:column;justify-content:center;align-items:center;height:90vh;text-align:center;background:linear-gradient(135deg,#111,#1f1f1f);}
+  .hero h1{font-size:3rem;margin-bottom:10px;}
+  .hero p{font-size:1.2rem;color:#aaa;margin-bottom:40px;}
+
+  /* Buttons */
+  .button-container{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;}
+  .slide-button{padding:15px 30px;background:#ff3d00;color:#fff;border-radius:12px;font-weight:bold;transform:translateY(50px);opacity:0;transition:transform 0.6s ease,opacity 0.6s ease;}
+  .slide-button:hover{background:#ff5722;}
+  .button-container.show .slide-button{transform:translateY(0);opacity:1;}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">SOAP</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Hire Me</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>SOAP | Roblox Developer</h1>
+  <p>Lua Scripting | Game Design | GUI & Animations</p>
+  <div class="button-container">
+    <a href="projects.html" class="slide-button">Projects</a>
+    <a href="skills.html" class="slide-button">Skills</a>
+    <a href="contact.html" class="slide-button">Hire Me</a>
+  </div>
+</section>
+
+<script>
+  window.addEventListener('DOMContentLoaded',()=>{
+    const container = document.querySelector('.button-container');
+    if(container){setTimeout(()=>{container.classList.add('show');},300);}
+  });
+</script>
+
+</body>
+</html>
